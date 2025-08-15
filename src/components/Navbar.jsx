@@ -1,0 +1,56 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="flex justify-center items-center py-6 bg-transparent">
+      {/* Desktop Navbar */}
+      <div className="hidden md:grid grid-cols-3 items-center rounded-full px-12 py-4 border border-gray-200 min-w-[700px] bg-white">
+        {/* Left menu options */}
+        <div className="flex justify-center space-x-12">
+          <a href="#" className="hover:text-blue-600 font-medium">Prebuilt</a>
+          <a href="#" className="hover:text-blue-600 font-medium">Customized</a>
+        </div>
+
+        {/* Logo */}
+        <div className="flex justify-center">
+          <img
+            src="/logo.png"
+            alt="Future Desks Logo"
+            className="h-8 w-auto"
+          />
+        </div>
+
+        {/* Right menu options */}
+        <div className="flex justify-center space-x-12">
+          <a href="#" className="hover:text-blue-600 font-medium">About Us</a>
+          <a href="#" className="hover:text-blue-600 font-medium">Contact Us</a>
+        </div>
+      </div>
+
+      {/* Mobile Navbar */}
+      <div className="flex md:hidden w-[90%] justify-between items-center px-6 py-3 border border-gray-200 rounded-full bg-white">
+        <img
+          src="/logo.png"
+          alt="Future Desks Logo"
+          className="h-8 w-auto"
+        />
+        <button onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white border border-gray-200 rounded-xl shadow-md flex flex-col items-center py-6 space-y-6 md:hidden">
+          <a href="#" className="hover:text-blue-600 font-medium">Prebuilt</a>
+          <a href="#" className="hover:text-blue-600 font-medium">Customized</a>
+          <a href="#" className="hover:text-blue-600 font-medium">About Us</a>
+          <a href="#" className="hover:text-blue-600 font-medium">Contact Us</a>
+        </div>
+      )}
+    </nav>
+  );
+}
