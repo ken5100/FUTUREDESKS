@@ -11,7 +11,7 @@ import DevTeam from "./components/DevTeam";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import "swiper/css";
-import "./app.css";
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
