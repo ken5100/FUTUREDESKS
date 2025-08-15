@@ -88,25 +88,33 @@ export default function Footer() {
       </div>
 
       {/* Watermark Below Content */}
-    <div className="w-full flex justify-center pb-4">
+<div className="w-full flex justify-center pb-4">
   <span
-    className="w-full text-center font-normal select-none whitespace-nowrap bg-clip-text text-transparent"
+    className="
+      w-full text-center font-normal sm:font-normal md:font-normal lg:font-normal
+      select-none whitespace-nowrap bg-clip-text text-transparent
+      text-[50px] sm:text-[80px] md:text-[100px] lg:text-[120px]
+      scale-y-[1.2] sm:scale-y-[1.2] md:scale-y-[1.2]
+      lg:scale-x-[1.5] lg:scale-y-[1]
+      -translate-y-2 sm:-translate-y-3
+      font-semibold
+    "
     style={{
       fontFamily: "Clash Display Variable, sans-serif",
-      fontWeight: 400,
+      fontWeight: 500, // slightly heavier for mobile
       fontStyle: "normal",
-      fontSize: "120px", // fixed height
       lineHeight: "1.08",
       backgroundImage: "linear-gradient(90deg, black, white)",
-      opacity: 0.2,
-      display: "inline-block",
-      transform: "scaleX(1.5)", // stretches width without affecting height
-      transformOrigin: "center", // keeps stretch centered
+      opacity: 0.3,
+      transformOrigin: "center",
     }}
   >
     FUTUREDESKS
   </span>
 </div>
+
+
+
 
     </footer>
   );
