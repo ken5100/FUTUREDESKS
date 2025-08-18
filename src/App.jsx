@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Features from "./components/Features";
@@ -10,52 +10,55 @@ import BestClient from "./components/BestClient";
 import DevTeam from "./components/DevTeam";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+
+// New pages
+import Prebuilt from "./pages/Prebuilt";
+
+
 import "swiper/css";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      {/* Background Section */}
-      <div
-        className="bg-cover bg-center min-h-screen"
-        style={{
-          backgroundImage: "url('/Bg2.png')",
-        }}
-      >
-        {/* Navbar */}
-        <Navbar />
+      <Routes>
+        {/* Landing Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              {/* Background Section */}
+              <div
+                className="bg-cover bg-center min-h-screen"
+                style={{ backgroundImage: "url('/Bg2.png')" }}
+              >
+                {/* Navbar stays inside background */}
+                <Navbar />
+                <HeroSection />
+              </div>
 
-        {/* Hero Section */}
-        <HeroSection />
-      </div>
+              {/* Other landing sections */}
+              <Features />
+              <BusinessStreamline />
+              <SocialPlatform />
+              <BestWork />
+              <MovingStrip />
+              <BestClient />
+              <DevTeam />
+              <FAQSection />
+              <Footer />
+            </>
+          }
+        />
 
-      {/* Features Section */}
-      <Features />
-
-      {/* Business Streamline Section */}
-      <BusinessStreamline />
-
-      {/* Social Platform Section */}
-      <SocialPlatform />
-
-<BestWork />
-<MovingStrip />
-
-<BestClient />
-
-<DevTeam />
-
-<FAQSection />
-
-      {/* Footer Section */}
-
-      <Footer />
-
+        {/* Other Pages */}
+        <Route path="/prebuilt" element={<Prebuilt />} />
+        {/* <Route path="/customized" element={<Customized />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
     </>
-  );  
+  );
 }
 
 export default App;
