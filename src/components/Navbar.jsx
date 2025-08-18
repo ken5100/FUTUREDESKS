@@ -40,14 +40,16 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white border border-gray-200 rounded-xl shadow-md flex flex-col items-center py-6 space-y-6 md:hidden">
-          <Link to="/prebuilt" className="hover:text-blue-600 font-medium">Prebuilt</Link>
-          <Link to="/customized" className="hover:text-blue-600 font-medium">Customized</Link>
-          <Link to="/about" className="hover:text-blue-600 font-medium">About Us</Link>
-          <Link to="/contact" className="hover:text-blue-600 font-medium">Contact Us</Link>
-        </div>
-      )}
+      {/* Mobile Menu */}
+{menuOpen && (
+  <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white border border-gray-200 rounded-xl shadow-md flex flex-col items-center py-6 space-y-6 md:hidden z-50">
+    <Link to="/prebuilt" className="hover:text-blue-600 font-medium">Prebuilt</Link>
+    <Link to="/customized" className="hover:text-blue-600 font-medium">Customized</Link>
+    <Link to="/about" className="hover:text-blue-600 font-medium">About Us</Link>
+    <Link to="/contact" className="hover:text-blue-600 font-medium">Contact Us</Link>
+  </div>
+)}
+
     </nav>
   );
 }

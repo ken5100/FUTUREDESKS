@@ -1,34 +1,70 @@
 "use client";
 import Navbar from "../components/Navbar";
 import MovingString from "../components/MovingStrip";
+import SaaS from "@/components/SaaS";
+import PrebuiltHero from "../components/Prebuilt_Hero_Section";
 
 export default function Prebuilt() {
   return (
-    <div
-      className="min-h-screen w-full bg-no-repeat bg-cover bg-top flex flex-col"
-      style={{
-        backgroundImage: "url('/bg_other.png')",
-      }}
-    >
-      {/* Navbar */}
-      <Navbar />
+    <div className="w-full flex flex-col">
+      {/* 1st Page with Background */}
+<div
+  className="
+    relative w-full flex flex-col
+    bg-no-repeat bg-center bg-cover
 
-      {/* Hero Section */}
-      <section className="flex flex-1 items-center justify-center text-center px-6">
-        <div className="font-[Gilroy-Medium]">
-          <h1 className="text-5xl md:text-7xl text-gray-900 leading-tight">
-            Prebuilt Saas Software for <br /> Startups
-          </h1>
-          <p className="mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-            Commodo nec mi id ullamcorper vitae augue neque dis. Nunc lacinia
-            viverra orci diam. Nibh est vitae suspendisse parturient sed lorem eu.
-          </p>
-        </div>
-      </section>
+    min-h-[80vh] sm:min-h-[75vh] md:min-h-screen
+  "
+  style={{ backgroundImage: "url('/Bg2.png')" }}
+>
 
-      {/* Moving String */}
-      <div className="">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Hero Section (centered) */}
+<div
+  className="
+    flex-1 flex flex-col 
+    justify-start pt-12   /* mobile (shifted above) */
+    md:justify-center md:pt-0  /* tablet & desktop stay centered */
+  "
+>
+  <PrebuiltHero />
+</div>
+
+{/* Left Object */}
+<img
+  src="/object1.png"
+  alt="Left Object"
+  className="
+    absolute 
+    top-53 left-2 w-20       /* mobile (default) */
+    md:top-50 md:left-0 md:w-48   /* tablet */
+    lg:top-50 lg:left-0 lg:w-64   /* desktop */
+  "
+/>
+
+{/* Right Object */}
+<img
+  src="/object2.png"
+  alt="Right Object"
+  className="
+    absolute 
+    top-35 right-2 w-20      /* mobile (default) */
+    md:top-20 md:right-0 md:w-48  /* tablet */
+    lg:top-20 lg:right-0 lg:w-64  /* desktop */
+  "
+/>
+
+
+
+        {/* Moving String at bottom */}
         <MovingString />
+      </div>
+
+      {/* 2nd Page (SaaS Section) */}
+      <div>
+        <SaaS />
       </div>
     </div>
   );
