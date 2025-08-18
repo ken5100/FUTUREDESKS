@@ -1,16 +1,40 @@
 export default function MovingString() {
   return (
     <div className="overflow-hidden w-full bg-black">
-      <div className="marquee">
-        {/* First set - fill full screen width */}
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
-        
-        {/* Duplicate set for seamless loop */}
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
-        <img src="/Developer.png" alt="Moving String" className="h-20 flex-shrink-0" />
+      <div className="marquee inline-flex items-center">
+        {/* First set */}
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
+
+        {/* Duplicate set */}
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
+        <img
+          src="/Developer.png"
+          alt="Moving String"
+          className="h-16 sm:h-20 w-auto object-contain"
+        />
       </div>
     </div>
   );

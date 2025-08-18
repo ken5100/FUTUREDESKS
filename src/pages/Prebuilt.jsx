@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import MovingString from "../components/MovingStrip";
 import SaaS from "@/components/SaaS";
 import PrebuiltHero from "../components/Prebuilt_Hero_Section";
+import BestClient from "@/components/BestClient";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
 export default function Prebuilt() {
   return (
@@ -13,7 +16,7 @@ export default function Prebuilt() {
     relative w-full flex flex-col
     bg-no-repeat bg-center bg-cover
 
-    min-h-[80vh] sm:min-h-[75vh] md:min-h-screen
+    min-h-[70vh] sm:min-h-[75vh] md:min-h-screen
   "
   style={{ backgroundImage: "url('/Bg2.png')" }}
 >
@@ -38,9 +41,10 @@ export default function Prebuilt() {
   alt="Left Object"
   className="
     absolute 
-    top-53 left-2 w-20       /* mobile (default) */
-    md:top-50 md:left-0 md:w-48   /* tablet */
-    lg:top-50 lg:left-0 lg:w-64   /* desktop */
+    top-37 left-2 w-20
+    md:top-50 md:left-0 md:w-48
+    lg:top-50 lg:left-0 lg:w-64
+    float-animation
   "
 />
 
@@ -50,11 +54,13 @@ export default function Prebuilt() {
   alt="Right Object"
   className="
     absolute 
-    top-35 right-2 w-20      /* mobile (default) */
-    md:top-20 md:right-0 md:w-48  /* tablet */
-    lg:top-20 lg:right-0 lg:w-64  /* desktop */
+    top-35 right-2 w-20
+    md:top-20 md:right-0 md:w-48
+    lg:top-20 lg:right-0 lg:w-64
+    float-animation
   "
 />
+
 
 
 
@@ -66,6 +72,21 @@ export default function Prebuilt() {
       <div>
         <SaaS />
       </div>
+
+      <div>
+        <BestClient />
+      </div>
+
+      <div>
+        <FAQSection />
+      </div>
+
+      <div>
+        <Footer />
+      </div>
+
+
+
     </div>
   );
 }
