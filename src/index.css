@@ -167,3 +167,32 @@ html, body, #root {
 .float-animation {
   animation: float 4s ease-in-out infinite;
 }
+
+
+.custom-pagination .swiper-pagination-bullet {
+  background: black !important; /* inactive dots black */
+  opacity: 0.4; /* slightly faded */
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: black !important; /* active dot solid black */
+  opacity: 1;
+}
+
+
+/* arrows black */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+}
+
+/* pagination black */
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background: black !important;
+  opacity: 0.4;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: black !important;
+  opacity: 1;
+}

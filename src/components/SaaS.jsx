@@ -91,9 +91,8 @@ export default function SaaS() {
           >
             {/* Product Image */}
             <motion.div
-              className={`flex justify-center ${
-                index % 2 !== 0 ? "md:order-2" : "md:order-1"
-              }`}
+              className={`flex justify-center ${index % 2 !== 0 ? "md:order-2" : "md:order-1"
+                }`}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
@@ -108,13 +107,10 @@ export default function SaaS() {
 
             {/* Product Info */}
             <motion.div
-              className={`font-[Gilroy-Medium] rounded-xl p-6 shadow-sm ${
-                index % 2 !== 0
-                  ? "text-center md:text-left md:order-1"
-                  : "text-center md:text-left md:order-2"
-              }`}
+              className={`font-[Gilroy-Medium] rounded-xl p-6 shadow-sm text-left ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
+                }`}
             >
-              <h3 className="text-2xl md:text-3xl text-gray-900 mb-6">
+              <h3 className="text-2xl md:text-3xl text-gray-900 mb-6 text-center md:text-left">
                 {product.title}
               </h3>
 
@@ -134,16 +130,18 @@ export default function SaaS() {
               </ul>
 
               {/* Button */}
-              <motion.button
-                className="px-6 py-2 bg-black text-white rounded-full shadow-md"
-                whileHover={{
-                  scale: 1.08,
-                  boxShadow: "0px 8px 20px rgba(0,0,0,0.3)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Check this out
-              </motion.button>
+              <motion.div className="flex justify-center md:justify-start">
+                <motion.button
+                  className="px-6 py-2 bg-black text-white rounded-full shadow-md"
+                  whileHover={{
+                    scale: 1.08,
+                    boxShadow: "0px 8px 20px rgba(0,0,0,0.3)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Check this out
+                </motion.button>
+              </motion.div>
             </motion.div>
           </motion.div>
         ))}

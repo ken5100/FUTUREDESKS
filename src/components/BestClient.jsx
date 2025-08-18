@@ -32,16 +32,19 @@ export default function BestClient() {
       <div className="max-w-6xl mx-auto px-4">
 <Swiper
   modules={[Navigation, Pagination, Autoplay]}
-  spaceBetween={10} // gap between cards
+  spaceBetween={10}
   loop
-  centeredSlides={true} // center the active slide
+  centeredSlides={true}
   navigation
-  pagination={{ clickable: true }}
+  pagination={{
+    clickable: true,
+    el: ".swiper-pagination-custom", // explicitly bind
+  }}
   autoplay={{ delay: 2800, disableOnInteraction: false }}
   breakpoints={{
-    0: { slidesPerView: 1, spaceBetween: 10 },     // mobile - show 1 slide
-    640: { slidesPerView: 2.1, spaceBetween: 10 }, // tablet
-    1024: { slidesPerView: 3.1, spaceBetween: 10 },// desktop
+    0: { slidesPerView: 1, spaceBetween: 10 },
+    640: { slidesPerView: 2.1, spaceBetween: 10 },
+    1024: { slidesPerView: 3.1, spaceBetween: 10 },
   }}
 >
   {clients.map((c, i) => (
@@ -67,6 +70,11 @@ export default function BestClient() {
     </SwiperSlide>
   ))}
 </Swiper>
+
+{/* Pagination BELOW slider */}
+<div className="swiper-pagination-custom flex justify-center mt-6" />
+
+
 
 
 

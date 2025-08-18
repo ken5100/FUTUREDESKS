@@ -80,7 +80,7 @@ export default function Prebuilt() {
       <div>
         <FAQSection />
       </div>
-
+    
       <div>
         <Footer />
       </div>
