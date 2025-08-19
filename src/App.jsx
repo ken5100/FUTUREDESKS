@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 // New pages
 import Prebuilt from "./pages/Prebuilt";
-
+import Customized from "./pages/Customized";
 
 import "swiper/css";
 import "./App.css";
@@ -53,7 +53,7 @@ function App() {
 
         {/* Other Pages */}
         <Route path="/prebuilt" element={<Prebuilt />} />
-        {/* <Route path="/customized" element={<Customized />} /> */}
+        <Route path="/customized" element={<Customized />} />
         {/* <Route path="/about" element={<About />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
