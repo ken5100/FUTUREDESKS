@@ -10,7 +10,7 @@ import BestClient from "./components/BestClient";
 import DevTeam from "./components/DevTeam";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
-
+import AboutUs from "./pages/AboutUs";
 // New pages
 import Prebuilt from "./pages/Prebuilt";
 import Customized from "./pages/Customized";
@@ -54,7 +54,7 @@ function App() {
         {/* Other Pages */}
         <Route path="/prebuilt" element={<Prebuilt />} />
         <Route path="/customized" element={<Customized />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/aboutUs" element={<AboutUs />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </>

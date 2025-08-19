@@ -24,7 +24,7 @@ export default function Navbar() {
 
         {/* Right menu options */}
         <div className="flex justify-center space-x-12">
-          <Link to="/about" className="hover:text-blue-600 font-medium">About Us</Link>
+          <Link to="/aboutUs" className="hover:text-blue-600 font-medium">About Us</Link>
           <Link to="/contact" className="hover:text-blue-600 font-medium">Contact Us</Link>
         </div>
       </div>
