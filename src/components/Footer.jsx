@@ -103,8 +103,8 @@ export default function Footer() {
       fontFamily: "Clash Display Variable, sans-serif",
       fontWeight: 500,
       fontStyle: "normal",
-      lineHeight: "1.08",
-      backgroundImage: "linear-gradient(to bottom, black, white)", 
+      lineHeight: "1.02",
+      backgroundImage: "linear-gradient(to bottom, #333333, #dddddd)", // toned black → toned white
       opacity: 0.2,
       transformOrigin: "center",
     }}
@@ -112,6 +112,7 @@ export default function Footer() {
     FUTUREDESKS
   </span>
 </div>
+
 
 
 
