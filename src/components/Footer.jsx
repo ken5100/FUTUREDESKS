@@ -101,17 +101,18 @@ export default function Footer() {
     "
     style={{
       fontFamily: "Clash Display Variable, sans-serif",
-      fontWeight: 500, // slightly heavier for mobile
+      fontWeight: 500,
       fontStyle: "normal",
       lineHeight: "1.08",
-      backgroundImage: "linear-gradient(90deg, black, white)",
-      opacity: 0.3,
+      backgroundImage: "linear-gradient(to bottom, black, white)", 
+      opacity: 0.2,
       transformOrigin: "center",
     }}
   >
     FUTUREDESKS
   </span>
 </div>
+
 
 
 
