@@ -3,17 +3,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useState } from "react";
-
-const slides = [
-  { id: 1, img: "/man-white.jpg", title: "Learning to Earning", views: "36.3K" },
-  { id: 2, img: "/man-white.jpg", title: "Toh Apne Client", views: "38.7K" },
-  { id: 3, img: "/man-white.jpg", title: "Meet Your New AI Team", views: "31.2K" },
-  { id: 4, img: "/man-white.jpg", title: "Episode 3", views: "40.1K" },
-];
+import { useState, useEffect } from "react";
+import { client } from "../lib/sanityClient";
 
 export default function SocialPlatform() {
+  const [posts, setPosts] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // Fetch posts from Sanity
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "swiper"]{
+        _id,
+        title,
+        caption,
+        "imageUrl": image.asset->url
+      }`)
+      .then(setPosts)
+      .catch(console.error);
+  }, []);
 
   return (
     <section className="py-16 text-center">
@@ -34,11 +42,11 @@ export default function SocialPlatform() {
           modules={[Navigation]}
           className="max-w-[900px] mx-auto"
         >
-          {slides.map((slide, index) => {
+          {posts.map((post, index) => {
             const isActive = index === activeIndex;
             return (
               <SwiperSlide
-                key={slide.id}
+                key={post._id}
                 className="!w-[250px] transition-all duration-300"
                 style={{
                   transform: isActive ? "scale(1)" : "scale(0.85)",
@@ -47,13 +55,13 @@ export default function SocialPlatform() {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <img
-                    src={slide.img}
-                    alt={slide.title}
+                    src={post.imageUrl}
+                    alt={post.title}
                     className="w-full h-[350px] object-cover"
                   />
                   <div className="absolute bottom-4 left-4 text-white drop-shadow-lg">
-                    <p className="text-lg font-bold">{slide.title}</p>
-                    <span className="text-sm opacity-90">{slide.views}</span>
+                    <p className="text-lg font-bold">{post.title}</p>
+                    <span className="text-sm opacity-90">{post.caption}</span>
                   </div>
                 </div>
               </SwiperSlide>

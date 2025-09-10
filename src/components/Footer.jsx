@@ -97,23 +97,20 @@ export default function Footer() {
       scale-y-[1.2] sm:scale-y-[1.2] md:scale-y-[1.2]
       lg:scale-x-[1.5] lg:scale-y-[1]
       -translate-y-2 sm:-translate-y-3
-      font-semibold
     "
     style={{
       fontFamily: "Clash Display Variable, sans-serif",
-      fontWeight: 500,
+      fontWeight: 500, // slightly heavier for mobile
       fontStyle: "normal",
-      lineHeight: "1.02",
-      backgroundImage: "linear-gradient(to bottom, #333333, #dddddd)", // toned black → toned white
-      opacity: 0.2,
+      lineHeight: "1.08",
+      backgroundImage: "linear-gradient(90deg, black, white)",
+      opacity: 0.3,
       transformOrigin: "center",
     }}
   >
     FUTUREDESKS
   </span>
 </div>
-
-
 
 
 
