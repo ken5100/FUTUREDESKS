@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
     <footer className="relative bg-footer-bg border-t border-gray-200 overflow-hidden w-full">
-      {/* Footer Main Content */}
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Section */}
+         
           <div>
             <div className="space-y-4">
               <h3 className="text-footer-text text-base font-medium">
@@ -19,7 +19,7 @@ export default function Footer() {
                 </a>
               </p>
 
-              {/* Newsletter */}
+             
               <div className="mt-6">
                 <form
                   className="relative w-full max-w-md mx-auto"
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation Links */}
+        
           <div className="lg:col-span-2 grid grid-cols-2 gap-8 sm:gap-12">
             <div>
               <h4 className="text-footer-muted text-sm font-medium mb-4">
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Watermark Below Content */}
+    
 <div className="w-full flex justify-center pb-4">
   <span
     className="
@@ -100,7 +100,7 @@ export default function Footer() {
     "
     style={{
       fontFamily: "Clash Display Variable, sans-serif",
-      fontWeight: 500, // slightly heavier for mobile
+      fontWeight: 500, 
       fontStyle: "normal",
       lineHeight: "1.08",
       backgroundImage: "linear-gradient(90deg, black, white)",

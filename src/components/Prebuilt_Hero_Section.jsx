@@ -27,12 +27,11 @@ export default function Hero() {
           className="
             mt-4 sm:mt-6 
             text-sm sm:text-base md:text-lg 
-            text-gray-600 
+            text-gray-500/60 
             max-w-md sm:max-w-xl md:max-w-2xl mx-auto
           "
         >
-          Commodo nec mi id ullamcorper vitae augue neque dis. Nunc lacinia
-          viverra orci diam. Nibh est vitae suspendisse parturient sed lorem eu.
+         Skip the long wait and high costs. Our prebuilt platforms help you go digital faster without compromising on quality.
         </p>
       </div>
     </section>
