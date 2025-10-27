@@ -27,7 +27,9 @@ const fadeUp = {
 
 export default function BestClient() {
   return (
-    <section className="py-16 w-full flex flex-col items-center text-center px-6">
+    <section className="py-16 w-full flex flex-col items-center text-center px-6" style={{
+      fontFamily: "Matter"
+    }}>
 
 
       <motion.div
@@ -47,7 +49,7 @@ export default function BestClient() {
         variants={fadeUp}
         custom={1}
         viewport={{ amount: 0.3 }}
-        className="mt-4 sm:mt-6 text-2xl sm:text-4xl font-[Gilroy-Medium] text-gray-900 leading-snug sm:leading-tight"
+        className="mt-4 sm:mt-6 text-2xl sm:text-4xl text-gray-900 leading-snug sm:leading-tight"
       >
         Happy Clients Testimonials
       </motion.h2>

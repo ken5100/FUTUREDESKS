@@ -3,13 +3,13 @@ import { MapPin, Mail, Phone, User, MessageSquare, MailOpen } from "lucide-react
 
 export default function ContactForm() {
   return (
-    <section className="w-full bg-white py-16 px-6 sm:px-10 lg:px-20">
+    <section className="w-full bg-white py-16 px-6 sm:px-10 lg:px-20 font-dmsans">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
        
         <div className="flex flex-col justify-center">
-          <p className="text-sm text-gray-500 font-medium mb-2">Contact Form</p>
+          <p className="text-sm text-gray-500 font-medium mb-2 font-poppins">Contact Form</p>
 
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4 leading-tight font-poppins">
             Have a question? <br /> Contact us now
           </h2>
 

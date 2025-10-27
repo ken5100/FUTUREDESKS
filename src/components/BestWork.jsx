@@ -18,14 +18,16 @@ export default function BestWork() {
   const displayedWorks = viewAll ? works : works.slice(0, 4);
 
   return (
-    <section className="py-16">
+    <section className="py-16" style={{
+      fontFamily: "Matter"
+    }}>
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-block px-4 py-1 bg-white shadow-md rounded-full text-gray-500 font-medium text-sm mb-4">
           Social Presence
         </div>
-        <h2 className="text-2xl sm:text-4xl font-semibold text-gray-900 mb-12">
-          Some of Our Best Work
+        <h2 className="text-2xl sm:text-4xl text-gray-900 mb-12">
+          Turning Visions Into Digital Reality
         </h2>
       </div>
 
@@ -48,7 +50,7 @@ export default function BestWork() {
                 animationFillMode: "forwards",
               }}
             >
-              <h3 className="text-lg font-semibold mb-2">{work.title}</h3>
+              <h3 className="text-lg mb-2">{work.title}</h3>
               <p className="text-gray-500 text-sm mb-4">
                 Apart from a car, a main work tool for your driver that helps to make money.
               </p>

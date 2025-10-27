@@ -56,7 +56,9 @@ const fadeUp = {
 
 export default function SaaS() {
   return (
-    <div className="w-full flex flex-col items-center text-center my-12 px-6">
+    <div className="w-full flex flex-col items-center text-center my-12 px-6" style={{
+      fontFamily: "Matter"
+    }}>
 
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -72,7 +74,7 @@ export default function SaaS() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mt-6 text-3xl md:text-4xl font-[Gilroy-Medium] text-gray-900"
+        className="mt-6 text-3xl md:text-4xl text-gray-900"
       >
         Check our SaaS Products
       </motion.h2>
@@ -107,7 +109,7 @@ export default function SaaS() {
 
 
             <motion.div
-              className={`font-[Gilroy-Medium] rounded-xl p-6 shadow-sm text-left ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
+              className={` rounded-xl p-6 shadow-sm text-left ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
                 }`}
             >
               <h3 className="text-2xl md:text-3xl text-gray-900 mb-6 text-center md:text-left">
@@ -130,7 +132,7 @@ export default function SaaS() {
               </ul>
 
 
-              <motion.div className="flex justify-center md:justify-start">
+              <motion.div className="flex justify-center md:justify-start" style={{ fontFamily: "Gilroy"}}>
                 <Link to={product.page}>
                   <motion.button
                     className="px-6 py-2 bg-black text-white rounded-full shadow-md"

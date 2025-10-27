@@ -1,16 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="relative bg-footer-bg border-t border-gray-200 overflow-hidden w-full">
+    <footer className="relative bg-footer-bg border-t border-gray-200 overflow-hidden w-full" style={{
+      fontFamily: 'Matter'
+    }}>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
          
           <div>
             <div className="space-y-4">
-              <h3 className="text-footer-text text-base font-medium">
+              <h3 className="text-footer-text text-base">
                 Contact us at
               </h3>
-              <p className="text-footer-text text-base font-semibold">
+              <p className="text-footer-text text-base font-medium">
                 <a
                   href="mailto:info@futuredesks.com"
                   className="hover:underline"
@@ -96,11 +98,9 @@ export default function Footer() {
       text-[50px] sm:text-[80px] md:text-[100px] lg:text-[120px]
       scale-y-[1.2] sm:scale-y-[1.2] md:scale-y-[1.2]
       lg:scale-x-[1.5] lg:scale-y-[1]
-      -translate-y-2 sm:-translate-y-3
+      -translate-y-2 sm:-translate-y-3 font-clash
     "
     style={{
-      fontFamily: "Clash Display Variable, sans-serif",
-      fontWeight: 500, 
       fontStyle: "normal",
       lineHeight: "1.08",
       backgroundImage: "linear-gradient(90deg, black, white)",

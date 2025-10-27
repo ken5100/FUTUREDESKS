@@ -60,8 +60,6 @@ const Customized = () => {
         float-animation
       "
         />
-
-
         <MovingString />
       </div>
 

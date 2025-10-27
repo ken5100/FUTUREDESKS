@@ -128,12 +128,12 @@ export default function TopProducts() {
   const [activeTab, setActiveTab] = useState("websites");
 
   return (
-    <div className="w-full flex flex-col items-center text-center my-12 px-6">
+    <div className="w-full flex flex-col items-center text-center my-12 px-6 font-poppins">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="px-6 py-2 bg-white shadow-md rounded-full text-gray-600 text-sm font-medium"
+        className="px-6 py-2 bg-white shadow-md rounded-full text-gray-600 text-sm font-medium" style={{ fontFamily:"Matter"}}
       >
         Projects
       </motion.div>
@@ -144,6 +144,7 @@ export default function TopProducts() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mt-6 text-center font-[Matter] text-gray-900"
         style={{
+          fontFamily: "Matter",
           fontWeight: 400,
           fontStyle: "normal",
           fontSize: "44px",
@@ -156,10 +157,10 @@ export default function TopProducts() {
       </motion.h2>
 
 
-    <div className="flex justify-center gap-3 mt-8">
+    <div className="flex justify-center gap-3 mt-8" style={{ fontFamily:"Matter"}}>
   <button
     onClick={() => setActiveTab("websites")}
-    className={`px-6 py-2 rounded-xl font-semibold transition-all duration-300 transform
+    className={`px-6 py-2 rounded-xl transition-all duration-300 transform
       ${
         activeTab === "websites"
           ? "bg-black text-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] translate-y-[-2px]"
@@ -171,7 +172,7 @@ export default function TopProducts() {
 
   <button
     onClick={() => setActiveTab("applications")}
-    className={`px-6 py-2 rounded-xl font-semibold transition-all duration-300 transform
+    className={`px-6 py-2 rounded-xl transition-all duration-300 transform
       ${
         activeTab === "applications"
           ? "bg-black text-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] translate-y-[-2px]"
@@ -213,11 +214,11 @@ export default function TopProducts() {
               </motion.div>
 
               <motion.div
-                className={`font-[Gilroy-Medium] rounded-xl p-6 text-left ${
+                className={`rounded-xl p-6 text-left ${
                   index % 2 !== 0 ? "md:order-1" : "md:order-2"
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl text-gray-900 mb-6 text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl text-gray-900 mb-6 text-center md:text-left font-medium">
                   {product.title}
                 </h3>
 

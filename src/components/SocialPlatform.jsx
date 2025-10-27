@@ -36,12 +36,14 @@ export default function SocialPlatform() {
   const getIndex = (offset) => (active + offset + posts.length) % posts.length;
 
   return (
-    <section className="py-16 text-center w-full">
+    <section className="py-16 text-center w-full" style={{
+            fontFamily : "Matter"
+          }}>
       <div className="inline-block px-4 py-1 bg-white shadow-md rounded-full text-gray-500 font-medium text-sm mb-4">
         Social Presence
       </div>
 
-      <h2 className="text-3xl font-bold mt-4">Trusted by 120k+ People</h2>
+      <h2 className="text-3xl mt-4">Trusted by 120k+ People</h2>
 
       <div className="mt-10 px-4 sm:px-8">
         <div className="relative w-full mx-auto flex items-center justify-center overflow-hidden">

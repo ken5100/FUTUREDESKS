@@ -42,7 +42,9 @@ export default function FAQSection() {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         <div>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug">
+          <h2 className="text-3xl sm:text-5xl text-gray-900 leading-snug" style={{
+            fontFamily: "Matter"
+          }}>
             Frequently Asked <br /> Questions
           </h2>
         </div>
@@ -54,7 +56,9 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-sm border border-gray-200"
+                className="bg-white rounded-lg shadow-sm border border-gray-200"  style={{
+                      fontFamily: "var(--font-jakarta)"
+                    }}
               >
                 
                 <button

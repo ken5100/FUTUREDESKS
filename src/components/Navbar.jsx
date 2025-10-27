@@ -6,7 +6,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-center items-center py-6 bg-transparent">
+    <nav className="flex justify-center items-center py-6 bg-transparent" style={{
+      fontFamily: "Matter"
+    }} >
      
       <div className="hidden md:grid grid-cols-3 items-center rounded-full px-12 py-4 border border-gray-200 min-w-[700px] bg-white">
        
@@ -18,7 +20,7 @@ export default function Navbar() {
       
         <div className="flex justify-center">
           <Link to="/">
-            <img src="/logo.png" alt="Future Desks Logo" className="h-8 w-auto" />
+            <img src="/logo.png" alt="Future Desks Logo" className="h-12 w-auto" />
           </Link>
         </div>
 

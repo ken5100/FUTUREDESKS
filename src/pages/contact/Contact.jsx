@@ -7,7 +7,6 @@ import ContactForm from '@/components/contact/FormSection'
 const Contact = () => {
     return (
         <div className="w-full flex flex-col">
-
             <div
                 className="
             relative w-full flex flex-col
@@ -54,8 +53,6 @@ const Contact = () => {
                 />
                 <MovingString />
             </div>
-
-
 
             <div>
                 <ContactForm />

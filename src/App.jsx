@@ -52,8 +52,6 @@ function App() {
             </>
           }
         />
-
-       
         <Route path="/prebuilt" element={<Prebuilt />} />
         <Route path="/product1" element={<Product1 />} />
         <Route path="/product/:id" element={<ProductDetails />} />

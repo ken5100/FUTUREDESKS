@@ -55,10 +55,6 @@ export default function Prebuilt() {
   "
         />
 
-
-
-
-
         <MovingString />
       </div>
 

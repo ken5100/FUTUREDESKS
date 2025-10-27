@@ -13,13 +13,16 @@ export default function Hero() {
         h-[70vh] sm:h-[75vh] md:h-screen  /* shorter height on mobile */
       "
     >
-      <div className="font-[Gilroy-Medium] w-full">
+      <div className="w-full">
         <h1
           className="
             text-3xl sm:text-4xl md:text-6xl lg:text-7xl 
             text-gray-900
             leading-snug sm:leading-tight
           "
+          style={{
+            fontFamily:"Gilroy", fontWeight: '500'
+          }}
         >
           Prebuilt Saas Software for <br /> Startups
         </h1>
@@ -28,7 +31,7 @@ export default function Hero() {
             mt-4 sm:mt-6 
             text-sm sm:text-base md:text-lg 
             text-gray-500/60 
-            max-w-md sm:max-w-xl md:max-w-2xl mx-auto
+            max-w-md sm:max-w-xl md:max-w-2xl mx-auto font-dmsans
           "
         >
          Skip the long wait and high costs. Our prebuilt platforms help you go digital faster without compromising on quality.

@@ -4,7 +4,7 @@ const BusinessStreamline = () => {
   const [embedBlocked, setEmbedBlocked] = useState(false);
 
   useEffect(() => {
-    // Test if the iframe loads; if it errors, we show fallback
+    
     const testIframe = document.createElement("iframe");
     testIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1";
     testIframe.style.display = "none";
@@ -18,16 +18,16 @@ const BusinessStreamline = () => {
     <div
       className="relative w-full sm:min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 py-12 sm:py-8 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/Frame-4.png')",
+        backgroundImage: "url('/Frame-4.png')", fontFamily: "Matter"
       }}
     >
-      {/* Heading */}
+      
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-6 sm:mb-8 text-white leading-snug">
         Streamline Business with our<br />
         <span className="block ml-4 sm:ml-8 md:ml-12">Flexible options</span>
       </h1>
 
-      {/* YouTube Video */}
+      
       <div className="w-full max-w-4xl h-48 sm:h-90 md:h-126 relative">
         {!embedBlocked ? (
           <iframe
