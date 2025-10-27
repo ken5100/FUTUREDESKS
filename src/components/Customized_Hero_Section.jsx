@@ -27,7 +27,7 @@ export default function Hero() {
           className="
             mt-4 sm:mt-6 
             text-sm sm:text-base md:text-lg 
-            text-gray-600 
+            text-gray-500/60 
             max-w-md sm:max-w-xl md:max-w-2xl mx-auto
           "
         >

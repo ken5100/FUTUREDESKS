@@ -1,11 +1,11 @@
-"use client";
-
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const products = [
   {
     id: 1,
     title: "Elite Quiz Web Platform",
+    page: "/product1",
     desc: [
       "Dignissim ipsum quisque mauris diam. Amet odio purus orci cursus cursus praesent.",
       "Commodo id amet mi. Dignissim ipsum quisque mauris diam. Amet odio purus orci cursus cursus praesent.",
@@ -57,7 +57,7 @@ const fadeUp = {
 export default function SaaS() {
   return (
     <div className="w-full flex flex-col items-center text-center my-12 px-6">
-      
+
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function SaaS() {
         SaaS
       </motion.div>
 
-    
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function SaaS() {
         Check our SaaS Products
       </motion.h2>
 
-     
+
       <section className="mt-16 w-full max-w-7xl mx-auto px-6 md:px-12 space-y-24">
         {products.map((product, index) => (
           <motion.div
@@ -89,7 +89,7 @@ export default function SaaS() {
             viewport={{ once: true, amount: 0.3 }}
             custom={index}
           >
-            
+
             <motion.div
               className={`flex justify-center ${index % 2 !== 0 ? "md:order-2" : "md:order-1"
                 }`}
@@ -105,7 +105,7 @@ export default function SaaS() {
               />
             </motion.div>
 
-         
+
             <motion.div
               className={`font-[Gilroy-Medium] rounded-xl p-6 shadow-sm text-left ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
                 }`}
@@ -114,7 +114,7 @@ export default function SaaS() {
                 {product.title}
               </h3>
 
-             
+
               <ul className="space-y-4 mb-6">
                 {product.desc.map((point, i) => (
                   <li
@@ -129,18 +129,20 @@ export default function SaaS() {
                 ))}
               </ul>
 
-            
+
               <motion.div className="flex justify-center md:justify-start">
-                <motion.button
-                  className="px-6 py-2 bg-black text-white rounded-full shadow-md"
-                  whileHover={{
-                    scale: 1.08,
-                    boxShadow: "0px 8px 20px rgba(0,0,0,0.3)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Check this out
-                </motion.button>
+                <Link to={product.page}>
+                  <motion.button
+                    className="px-6 py-2 bg-black text-white rounded-full shadow-md"
+                    whileHover={{
+                      scale: 1.08,
+                      boxShadow: "0px 8px 20px rgba(0,0,0,0.3)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Check this out
+                  </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

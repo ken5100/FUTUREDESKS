@@ -10,34 +10,36 @@ import BestClient from "./components/BestClient";
 import DevTeam from "./components/DevTeam";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
-import AboutUs from "./pages/AboutUs";
-// New pages
-import Prebuilt from "./pages/Prebuilt";
-import Customized from "./pages/Customized";
-
+import AboutUs from "./pages/about-us/AboutUs";
+import Prebuilt from "./pages/prebuilt/Prebuilt";
+import Customized from "./pages/customized/Customized";
+import ProductDetails from "./pages/prebuilt/ProductDetails";
+import Product1 from "./pages/prebuilt/Product1";
+import ScrollToTop from "./components/ScrollToTop";
 import "swiper/css";
 import "./App.css";
-
+import Contact from "./pages/contact/Contact";
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
-        {/* Landing Page */}
+       
         <Route
           path="/"
           element={
             <>
-              {/* Background Section */}
+             
               <div
                 className="bg-cover bg-center min-h-screen"
                 style={{ backgroundImage: "url('/Bg2.png')" }}
               >
-                {/* Navbar stays inside background */}
+                
                 <Navbar />
                 <HeroSection />
               </div>
 
-              {/* Other landing sections */}
+            
               <Features />
               <BusinessStreamline />
               <SocialPlatform />
@@ -51,11 +53,13 @@ function App() {
           }
         />
 
-        {/* Other Pages */}
+       
         <Route path="/prebuilt" element={<Prebuilt />} />
+        <Route path="/product1" element={<Product1 />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/customized" element={<Customized />} />
         <Route path="/aboutUs" element={<AboutUs />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
