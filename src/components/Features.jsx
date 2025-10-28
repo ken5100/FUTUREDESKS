@@ -1,42 +1,46 @@
+import { useNavigate } from "react-router-dom";
+
 function Features() {
+  const navigate = useNavigate();
+
   const featuresData = [
     {
       img: "/features1.png",
       title: "Custom Development",
       description:
         "Monitor your finances live with clear, intuitive dashboards.",
+      link: "/customized",
     },
     {
       img: "/features2.png",
       title: "SaaS Prebuilt @ 50,000 /-",
       description:
         "Monitor your finances live with clear, intuitive dashboards.",
+      link: "/prebuilt",
     },
   ];
 
   return (
-    <section className="w-full flex flex-col items-center py-16 bg-transparent" style={{
-            fontFamily : "Matter"
-          }}>
-      
+    <section
+      className="w-full flex flex-col items-center py-16 bg-transparent"
+      style={{ fontFamily: "Matter" }}
+    >
       <div className="px-4 py-1 bg-white shadow-md rounded-full text-gray-500 font-medium text-sm mb-4">
         Features
       </div>
 
-      
       <h2 className="text-3xl sm:text-5xl text-center text-gray-800 mb-10">
         Streamline Business with our <br className="hidden sm:block" />
         Flexible options
       </h2>
 
-      
       <div className="w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 justify-center">
         {featuresData.map((feature, idx) => (
           <article
             key={idx}
-            className="bg-[url('/paper-texture.png')] bg-cover bg-white flex flex-col items-center rounded-xl overflow-hidden shadow-sm ring-1 ring-gray-200 p-4 transition-all duration-300 hover:shadow-xl hover:scale-[1.03] max-w-[500px] mx-auto opacity-0 animate-fadeInUp"
+            onClick={() => navigate(feature.link)}
+            className="cursor-pointer bg-[url('/paper-texture.png')] bg-cover bg-white flex flex-col items-center rounded-xl overflow-hidden shadow-sm ring-1 ring-gray-200 p-4 transition-all duration-300 hover:shadow-xl hover:scale-[1.03] max-w-[500px] mx-auto opacity-0 animate-fadeInUp"
           >
-            
             <div className="flex justify-center items-center h-[200px] sm:h-[250px] w-full mb-4 overflow-hidden">
               <img
                 src={feature.img}
@@ -44,7 +48,7 @@ function Features() {
                 className="max-h-full max-w-full object-contain"
               />
             </div>
-            
+
             <div className="w-full text-left px-2">
               <h3 className="text-lg sm:text-2xl font-semibold text-gray-900 mb-2">
                 {feature.title}
@@ -57,7 +61,6 @@ function Features() {
         ))}
       </div>
 
-      
       <style jsx>{`
         @keyframes fadeInUp {
           0% {
