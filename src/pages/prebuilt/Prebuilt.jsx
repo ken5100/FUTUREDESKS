@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "../../components/Navbar";
 import MovingString from "../../components/MovingStrip";
-import SaaS from "@/components/SaaS";
+import SaaS from "@/components/PrebuiltProducts";
 import PrebuiltHero from "../../components/Prebuilt_Hero_Section";
 import BestClient from "@/components/BestClient";
 import FAQSection from "@/components/FAQSection";

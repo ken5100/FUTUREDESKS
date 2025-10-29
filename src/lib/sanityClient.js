@@ -6,5 +6,3 @@ export const client = createClient({
   useCdn: true, // `false` if you want the latest data always
   apiVersion: "2025-09-10", // use a fixed date
 });
-// Note: You can also add a token here to allow write operations
-// token: "your_sanity_token", // only if you want to update content with the client

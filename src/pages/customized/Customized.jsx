@@ -21,9 +21,7 @@ const Customized = () => {
         style={{ backgroundImage: "url('/Bg2.png')" }}
       >
 
-
         <Navbar />
-
 
         <div
           className="
